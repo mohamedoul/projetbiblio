@@ -1,26 +1,72 @@
-\documentclass {article}
-
+\documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
 \usepackage[T1]{fontenc}
-\usepackage{times}
 \usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{eurosym}
+\usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{hyperref}
 \usepackage{gensymb}
-\usepackage{upgreek}
-\usepackage{textcomp}
-\usepackage[final]{pdfpages} 
+
+\usepackage{listings,color}
+
+\definecolor{verbgray}{gray}{0.9}
 
 
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\newcommand{\hsp}{\hspace{20pt}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
-
-
-
+\renewcommand{\thesection}{\Alph{section}}
 
 \begin{document}
+
+
+\begin{titlepage}
+  \begin{sffamily}
+  \begin{center}
+\begin{figure}
+
+\end{figure}
+
+    \fbox{\textsc{\LARGE Projet bibliographique}}\\[2.5cm]
+
+    \textsc{\Large Rapport final}\\[1.5cm]
+
+    \HRule \\[0.4cm]
+    { \huge \bfseries Détection automatique des Nématodes \\[0.4cm] }
+ \HRule \\[1.5cm]
+ 
+ \centering{
+\includegraphics[scale=1]{logo.png} 
+}\\[8cm]
+
+
+        \begin{flushleft}
+	Félix BOUTERAA 02/01/2018
+	\end{flushleft}  
+    
+    \begin{flushright}
+\href{mailto:felix.bouteraa.elv@eilco-ulco.fr}{felix.bouteraa.elv@eilco-ulco.fr} 
+\end{flushright}  
+
+  \end{center}
+  \end{sffamily}
+\end{titlepage}
+
 \newpage
+
+\tableofcontents
+
+\newpage
+
 \section*{Introduction}
 \addcontentsline{toc}{section}{Introduction}
-\paragraph  Les poissons peuvent être infestés par de nombreux parasites incluant les protozoaires, les trématodes, les nématodes et les cestodes Contracaecum, Hysterothylacium
+ Les poissons peuvent être infestés par de nombreux parasites incluant les protozoaires, les trématodes, les nématodes et les cestodes Contracaecum, Hysterothylacium
 et Pseudoterranova. Les larves de deux espèces de la famille des nématodes Anisakidae. Ces parasites constituent un danger pour la santé publiqiue. En effet,  Ils peuvent entraîner des
 pathologies digestives (anisakidose) et allergiques chez
 l’Homme. Le nombre de cas d’anisakidose pourrait
@@ -28,33 +74,32 @@ augmenter de façon significative au cours des prochaines
 années suite à la consommation accrue de produits marinés
 ou crus, au non-respect de la réglementation européenne
 et au manque de perception du risque (pas de congélation
-du produit avant consommation cru) par le consommateur. Par conséquent et afin de maitraîser le risque lié à la présence de ces parasites,
+du produit avant consommation cru) par le consommateur.\\
+ Par conséquent et afin de maitraîser le risque lié à la présence de ces parasites,
 les réglementations européennes (CE 852/2004, CE 853/2004,
-CE 854/2004, CE 2074/2005, CE 1276/2011) imposent : 1) la nécessité
-d’un contrôle visuel: les produits manifestement parasités ne doivent
-pas être missur le marché; 2) une congélation assainissante obligatoire
-(-20 °C pendant 24hou -35 C pendant 15hen tous points du produit)
+CE 854/2004, CE 2074/2005, CE 1276/2011) imposent :
+\begin{enumerate}
+\item La nécessité d’un contrôle visuel: les produits manifestement parasités ne doivent
+pas être missur le marché
+ \item Une congélation assainissante obligatoire
+(-20 \degree C pendant 24h ou -35 \degree C pendant 15h en tous points du produit)
 pour les produits devant être consommés crus ou pratiquement crus
-et pour les produits devant subir un traitement de fumageàfroid
-(T < 60 °C) et pour les produits marinés et/ou salés si le traitement
-est insuffisant pour tuer les parasites viables.
+et pour les produits devant subir un traitement de fumage à froid(T < 60 \degree C) et pour les produits marinés et/ou salés si le traitement est insuffisant pour tuer les parasites viables.
+\end{enumerate}
 
+\newpage
 
-
-[Réf5]
-[Ré6]	
-
-\section {Les  méthode  non-destructrices de détection des parasites dans les filets de poissons :}
-\subsection{La méthode du mirage :}
-\paragraph 	La méthode utilisé dans la majorité des cas pour déterminer la présence de parasite est le mirage qui implique l’inspection de chaque filet à travers une surface illuminée translucide. Cette méthode est limitée parce qu’elle ne peut pas détecter les parasites enkystés à une profondeur supérieure à 6 mm dans le muscle du poisson.Egalement, elle demeure très fatiguante pour l'oeil de l'opratueur. mais son avantage reste le coût du moment qu'elle ne nécessite la mise en place d'un dispositif quelconque.
+\section {Les  méthode  non-destructrices de détection des parasites dans les filets de poissons}
+\subsection{La table de mirage}
+La méthode utilisé dans la majorité des cas pour déterminer la présence de parasite est le mirage qui implique l’inspection de chaque filet à travers une surface illuminée translucide. Cette méthode est limitée parce qu’elle ne peut pas détecter les parasites enkystés à une profondeur supérieure à 6 mm dans le muscle du poisson. Egalement, elle demeure très fatiguante pour l'oeil de l'opérateur. Mais son avantage reste le coût du moment qu'elle ne nécessite la mise en place d'un dispositif quelconque.
 
 \begin{figure}[!h]
    \center
    \includegraphics[scale=0.5]{Table_mirage.png}
-   \caption {Détection des larves d'Anisakidés en industrie sur table de mirage classique. [Réf 7]}
+   \caption {Détection des larves d'Anisakidés en industrie sur table de mirage classique.}
 \end{figure}
 
-\subsection{ la méthode du mirage au laser:}
+\subsection{Méthode du mirage au laser}
 
 De nombreuses alternatives ont été tentées pour détecter les parasites dans les filets  essentiellement  par exemple le mirage au laser,
 \subsection{ la méthode des rayons X :}
@@ -91,7 +136,7 @@ le microscope au scanner acoustique (SLAM).
 
 \paragraph Pour la transillumination UV a été effectuée comme suit: 
 \begin{itemize}
-\item   solution saline (1: 5 w / v) à 30 ° C a été ajouté à des chantillons de poisson, qui ont ensuite été homogénéisés dans un stomacher pendant 1 à 2 minutes.
+\item   solution saline (1: 5 w / v) à 30 \degree C a été ajouté à des chantillons de poisson, qui ont ensuite été homogénéisés dans un stomacher pendant 1 à 2 minutes.
 \item l'homogénat a été pressé à couche mince de 5 mm et examiné sous lumière UV à 366 nm dans une pièce sombre. Dans de telles conditions de fonctionnement, les larves restent intactes.
 \end{itemize} 
 Les résultat obtenus grâce à ces deux méthodes : l’observation directe et la transillumination UV sont consignés dans le tableau ci-dessous.  
@@ -103,5 +148,6 @@ Les résultat obtenus grâce à ces deux méthodes : l’observation directe et 
 \end{itemize} 
 \subsection {La méthode de la digestion pepsique:}
 \newpage
+
 
 \end{document}
