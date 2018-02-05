@@ -5,7 +5,8 @@
 \contentsline {subsection}{\numberline {A.2}M\IeC {\'e}thode du mirage au laser}{4}{subsection.1.2}
 \contentsline {subsection}{\numberline {A.3}M\IeC {\'e}thode des rayons X}{4}{subsection.1.3}
 \contentsline {subsection}{\numberline {A.4}M\IeC {\'e}thode ultrasons}{4}{subsection.1.4}
-\contentsline {subsection}{\numberline {A.5}La m\IeC {\'e}thode du microscope au scanner acoustique}{5}{subsection.1.5}
+\contentsline {subsection}{\numberline {A.5}M\IeC {\'e}thode \IeC {\'e}l\IeC {\'e}ctromagn\IeC {\'e}tique}{5}{subsection.1.5}
+\contentsline {subsection}{\numberline {A.6}La m\IeC {\'e}thode du microscope au scanner acoustique}{5}{subsection.1.6}
 \contentsline {section}{\numberline {B}Visible Imaging}{5}{section.2}
 \contentsline {section}{\numberline {C}Near-Infrared}{5}{section.3}
 \contentsline {section}{\numberline {D}Les m\IeC {\'e}thode destructrices de d\IeC {\'e}tection des parasites dans les filets de poissons :}{6}{section.4}
